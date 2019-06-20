@@ -1,0 +1,50 @@
+Django==2.0.13
+pytz==2019.1
+
+{% load static %}
+<html>
+    <head>
+        <title>ALAN SPOR FK</title>
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+    </head>
+    <body>
+        <div> class="page-header">
+            <h1><a href="/">ALAN SPOR</</a></h1>
+        </div>
+
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% block content %}
+                <div class="post">
+                    <div class="date">
+                        <p>Yayın tarihi: {{ post.published_date }}</p>
+                    </div>
+                    <h1><a href="">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+        {{ posts }}
+            <p>published: 14.06.2014, 12:14</p>
+            <h2><a href="">KURULUŞ TARiHi</a></h2>
+            <p>  07.07.2014  </p>
+        {{ posts }}
+
+        <div>
+            <p>published: 14.06.2014, 12:20</p>
+            <h2><a href="">FUTBOLCULARı</a></h2>
+            <p> Kaan SARi,Kemal iDARECi,Fahrettin ÇiRAK,Caner AK,Abdulkadir ÇiRAK,Ramazan AK,Mehmet TOK, Doğukan TOK,Koraycan ÇiRAK,Muhammet AK,Abdulkadir iDARECi,Furkan ÇiRAK,MustafaAli AK </p>
+        </div>
+    </body>
+</html>
+ 
+
