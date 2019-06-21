@@ -1,0 +1,12 @@
+Django==2.0.13
+pytz==2019.1
+
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h1>Yeni post</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Kaydet</button>
+    </form>
+{% endblock %}
